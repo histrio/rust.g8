@@ -1,17 +1,17 @@
 RUSTC ?= rustc
 RUSTC_FLAGS ?=
 
-SRC = $(shell find src -name '*.rs')
+SRC = \$(shell find src -name '*.rs')
 
 all: libprojectname
 
-libprojectname: $(SRC)
+libprojectname: \$(SRC)
 	mkdir -p target
-	$(RUSTC) --out-dir target src/lib.rs
+	\$(RUSTC) --out-dir target src/lib.rs
 
-test: $(SRC)
+test: \$(SRC)
 	mkdir -p target
-	$(RUSTC) --test --out-dir target src/lib.rs
+	\$(RUSTC) --test --out-dir target src/lib.rs
 	./target/projectname
 
 clean:
