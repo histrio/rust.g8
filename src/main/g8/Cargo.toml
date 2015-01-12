@@ -1,0 +1,5 @@
+[package]
+
+name = "$name$"
+version = "$version$"
+authors = ["$developer_full_name$ <$developer_email$>"]
